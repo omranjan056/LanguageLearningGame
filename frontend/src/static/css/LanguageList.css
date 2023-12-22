@@ -1,0 +1,21 @@
+/* LanguageList.css */
+.language-list-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.language-list {
+    list-style: none;
+    padding: 0;
+}
+
+.language-list li {
+    margin-bottom: 8px;
+}
+
+.language-list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}

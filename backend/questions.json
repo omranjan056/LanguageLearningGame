@@ -1,0 +1,578 @@
+{
+    "questions": [
+        {
+            "text": "I spoke to ________.",
+            "options": [
+                "she",
+                "her"
+            ],
+            "correctAnswer": "her",
+            "rating": 2,
+            "decreaseAmount": 1,
+            "increaseAmount": 3
+        },
+        {
+            "text": "Where ________ you come from?",
+            "options": [
+                "do",
+                "are"
+            ],
+            "correctAnswer": "do",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "What time does she ____________ up?",
+            "options": [
+                "get",
+                "gets"
+            ],
+            "correctAnswer": "get",
+            "rating": 3,
+            "decreaseAmount": 1,
+            "increaseAmount": 2
+        },
+        {
+            "text": "Where ____________ he live?",
+            "options": [
+                "do",
+                "does"
+            ],
+            "correctAnswer": "does",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "I am not ________ this film.'",
+            "options": [
+                "liking",
+                "enjoying"
+            ],
+            "correctAnswer": "enjoying",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "I am seeing her ________ three o'clock.",
+            "options": [
+                "in",
+                "at",
+                "on"
+            ],
+            "correctAnswer": "at",
+            "rating": 3,
+            "decreaseAmount": 1,
+            "increaseAmount": 2
+        },
+        {
+            "text": "Easter is ____________ March this year.",
+            "options": [
+                "on",
+                "at",
+                "in"
+            ],
+            "correctAnswer": "in",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "She's ________ work all day today.",
+            "options": [
+                "at",
+                "on"
+            ],
+            "correctAnswer": "at",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "I go ____________ by bus.",
+            "options": [
+                "home",
+                "to home"
+            ],
+            "correctAnswer": "home",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "'Do you like it?'",
+            "options": [
+                "'Yes, I like.'",
+                "'Yes, I do.'"
+            ],
+            "correctAnswer": "'Yes, I do.'",
+            "rating": 3,
+            "decreaseAmount": 1,
+            "increaseAmount": 2
+        },
+        {
+            "text": "It's the second road ____________ the left.",
+            "options": [
+                "in",
+                "at",
+                "on"
+            ],
+            "correctAnswer": "on",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "He's arriving ____________ the station at six.",
+            "options": [
+                "at",
+                "on",
+                "to"
+            ],
+            "correctAnswer": "at",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "I ____________ what she's saying.",
+            "options": [
+                "can't understand",
+                "am not understanding"
+            ],
+            "correctAnswer": "can't understand",
+            "rating": 3,
+            "decreaseAmount": 1,
+            "increaseAmount": 2
+        },
+        {
+            "text": "She lives ____________ London.",
+            "options": [
+                "on",
+                "at",
+                "in"
+            ],
+            "correctAnswer": "in",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "I'm going ____________ the bank to get some cash.",
+            "options": [
+                "at",
+                "to"
+            ],
+            "correctAnswer": "to",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "I went there ________ foot.",
+            "options": [
+                "in",
+                "by",
+                "at",
+                "on",
+                "to"
+            ],
+            "correctAnswer": "on",
+            "rating": 3,
+            "decreaseAmount": 1,
+            "increaseAmount": 2
+        },
+        {
+            "text": "________ is a cinema in the shopping centre.",
+            "options": [
+                "There",
+                "It"
+            ],
+            "correctAnswer": "There",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "I went ________ with my sister.",
+            "options": [
+                "their",
+                "there"
+            ],
+            "correctAnswer": "there",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "She ________ as a doctor.",
+            "options": [
+                "is",
+                "works"
+            ],
+            "correctAnswer": "works",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "She ____________ a doctor.",
+            "options": [
+                "is",
+                "works"
+            ],
+            "correctAnswer": "is",
+            "rating": 3,
+            "decreaseAmount": 1,
+            "increaseAmount": 2
+        },
+        {
+            "text": "How ____________ did your journey take?",
+            "options": [
+                "long",
+                "long time"
+            ],
+            "correctAnswer": "long",
+            "rating": 2,
+            "decreaseAmount": 1,
+            "increaseAmount": 3
+        },
+        {
+            "text": "He comes ________ the north of the country.",
+            "options": [
+                "to",
+                "from"
+            ],
+            "correctAnswer": "from",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "She ________ goodbye.",
+            "options": [
+                "said",
+                "told",
+                "spoke"
+            ],
+            "correctAnswer": "said",
+            "rating": 3,
+            "decreaseAmount": 1,
+            "increaseAmount": 2
+        },
+        {
+            "text": "They are ____________ love.",
+            "options": [
+                "in",
+                "on",
+                "at",
+                "to",
+                "by"
+            ],
+            "correctAnswer": "in",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "You _________ drink and drive.",
+            "options": [
+                "may",
+                "must",
+                "may not",
+                "must not"
+            ],
+            "correctAnswer": "must not",
+            "rating": 3,
+            "decreaseAmount": 1,
+            "increaseAmount": 2
+        },
+        {
+            "text": "She's studying law ________ university.",
+            "options": [
+                "in",
+                "at"
+            ],
+            "correctAnswer": "at",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "The bus stopped ____________ the traffic lights.",
+            "options": [
+                "in",
+                "on",
+                "at"
+            ],
+            "correctAnswer": "at",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "She ________ English twice a week.",
+            "options": [
+                "study",
+                "studys",
+                "studeis",
+                "studies"
+            ],
+            "correctAnswer": "studies",
+            "rating": 3,
+            "decreaseAmount": 1,
+            "increaseAmount": 2
+        },
+        {
+            "text": "________ is it?",
+            "options": [
+                "Who's",
+                "Whose"
+            ],
+            "correctAnswer": "Whose",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "__________ you afford it?",
+            "options": [
+                "Do",
+                "Can"
+            ],
+            "correctAnswer": "Can",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "They aren't selling ________ tickets.",
+            "options": [
+                "much",
+                "many"
+            ],
+            "correctAnswer": "many",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "There isn't ________ for all of us to get in.",
+            "options": [
+                "room enough",
+                "enough room"
+            ],
+            "correctAnswer": "enough room",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "The police ____________ called.",
+            "options": [
+                "was",
+                "were"
+            ],
+            "correctAnswer": "were",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "In a shop, you are a ________.",
+            "options": [
+                "client",
+                "customer"
+            ],
+            "correctAnswer": "customer",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "It's bigger ________ the old one.",
+            "options": [
+                "as",
+                "than",
+                "then"
+            ],
+            "correctAnswer": "than",
+            "rating": 3,
+            "decreaseAmount": 1,
+            "increaseAmount": 2
+        },
+        {
+            "text": "'__________________ did she do it?' 'Yesterday.'",
+            "options": [
+                "Why",
+                "Where",
+                "When",
+                "How"
+            ],
+            "correctAnswer": "When",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "How ____________ you spell it?",
+            "options": [
+                "do",
+                "can"
+            ],
+            "correctAnswer": "do",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "How much did you ____________ in the shop?",
+            "options": [
+                "cost",
+                "spend"
+            ],
+            "correctAnswer": "spend",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "'How ____________ did you buy?' 'Three kilos.'",
+            "options": [
+                "much",
+                "many"
+            ],
+            "correctAnswer": "much",
+            "rating": 3,
+            "decreaseAmount": 1,
+            "increaseAmount": 2
+        },
+        {
+            "text": "I don't work ________ the morning.",
+            "options": [
+                "on",
+                "in",
+                "at"
+            ],
+            "correctAnswer": "in",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "I saw her ________. ",
+            "options": [
+                "last week",
+                "the last week"
+            ],
+            "correctAnswer": "last week",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "It costs ________ dollars.",
+            "options": [
+                "forty",
+                "fourty"
+            ],
+            "correctAnswer": "forty",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "I heard it ____________ the radio.",
+            "options": [
+                "in",
+                "at",
+                "on"
+            ],
+            "correctAnswer": "on",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "There ________ a lot of complaints.",
+            "options": [
+                "was",
+                "were"
+            ],
+            "correctAnswer": "were",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "There ________ a lot of sugar in the coffee.",
+            "options": [
+                "was",
+                "were"
+            ],
+            "correctAnswer": "was",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "He didn't work ________. ",
+            "options": [
+                "enough hard",
+                "hard enough"
+            ],
+            "correctAnswer": "hard enough",
+            "rating": 3,
+            "decreaseAmount": 1,
+            "increaseAmount": 2
+        },
+        {
+            "text": "I ________. ",
+            "options": [
+                "am not knowing",
+                "don't know",
+                "doesn't know"
+            ],
+            "correctAnswer": "don't know",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "__________________ girlfriend left him.",
+            "options": [
+                "He",
+                "Him",
+                "His"
+            ],
+            "correctAnswer": "His",
+            "rating": 2,
+            "decreaseAmount": 0,
+            "increaseAmount": 1
+        },
+        {
+            "text": "There are too ________. ",
+            "options": [
+                "much",
+                "many"
+            ],
+            "correctAnswer": "many",
+            "rating": 1,
+            "decreaseAmount": 0,
+            "increaseAmount": 2
+        },
+        {
+            "text": "I hope you do ________. ",
+            "options": [
+                "good",
+                "well"
+            ],
+            "correctAnswer": "well",
+            "rating": 3,
+            "decreaseAmount": 1,
+            "increaseAmount": 2
+        }
+    ]
+}
