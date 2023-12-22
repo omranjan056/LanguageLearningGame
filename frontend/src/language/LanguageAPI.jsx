@@ -78,10 +78,10 @@ class LanguageAPI {
         }
     }
 
-    static async getUserGrade(language_id, question_set_id) {
+    static async getUserGrade(leaderboard_id) {
         try {
             const access_token = cookie.get("access_token");
-            const response = await axios.post(`${this.baseUrl}/user-grade/${language_id}/${question_set_id}`, {
+            const response = await axios.get(`${this.baseUrl}/user-grade/${leaderboard_id}`, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `JWT ${access_token}`,

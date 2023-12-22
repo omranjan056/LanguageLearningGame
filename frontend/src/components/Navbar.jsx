@@ -38,7 +38,8 @@ const Navbar = () => {
       } catch (error) {
         // console.error('Error during authentication check');
         setIsAuth(false);
-        navigate("/user/login");
+        alert("Please login");
+        // navigate("/user/login");
       }
     };
 

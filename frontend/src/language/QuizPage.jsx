@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import LanguageAPI from './LanguageAPI';
 
 const QuizPage = () => {
     const [questions, setQuestions] = useState([]);
     const [formData, setFormData] = useState([]);
     const { language_id, question_set_id } = useParams();
+    const navigate = useNavigate();
 
     const handleOptionChange = (question_id, option_id) => {
         // Find if the question already has an answer in the formData
@@ -41,7 +42,13 @@ const QuizPage = () => {
                 answers: formData,
             });
 
-            console.log(response);
+            console.log(response.data);
+            if(response.status === 200)
+            {
+                // navigate(`/languages/grade`);
+                navigate(`/languages/grade/${response.data.id}`);
+
+            }
             // Handle response accordingly, e.g., show results or navigate to a new page
         } catch (error) {
             console.error("Error submitting answers:", error);

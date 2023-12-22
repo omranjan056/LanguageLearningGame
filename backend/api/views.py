@@ -4,7 +4,7 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 from django.shortcuts import get_object_or_404
 from .models import Language, QuestionSet, Question, QuestionAnswer, Leaderboard, QuestionOption
-from .serializers import LanguageSerializer, QuestionSetSerializer, QuestionSerializer, LeaderboardSerializer
+from .serializers import LanguageSerializer, QuestionSetSerializer, QuestionSerializer, LeaderboardSerializer, GradeSerializer
 from django.db.models import F
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from django.core.exceptions import ObjectDoesNotExist
@@ -68,24 +68,40 @@ class GetQuestionsView(APIView):
 
 
 
+# class GetUserGradeView(APIView):
+#     permission_classes = [IsAuthenticated]
+
+#     def get(self, request, language_id, question_set_id):
+#         try:
+#             user = request.user
+#             language = get_object_or_404(Language, id=language_id)
+#             question_set = get_object_or_404(QuestionSet, id=question_set_id)
+
+#             leaderboard_entry = Leaderboard.objects.filter(user=user, language=language, questionset=question_set).first()
+
+#             if leaderboard_entry:
+#                 serializer = LeaderboardSerializer(leaderboard_entry)
+#                 return Response(serializer.data, status=status.HTTP_200_OK)
+#             else:
+#                 return Response({'message': 'No grade found for the user in the specified language and question set.'}, status=status.HTTP_404_NOT_FOUND)
+#         except Exception as e:
+#             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        
 class GetUserGradeView(APIView):
     permission_classes = [IsAuthenticated]
 
-    def get(self, request, language_id, question_set_id):
+    def get(self, request, leaderboard_id):
         try:
-            user = request.user
-            language = get_object_or_404(Language, id=language_id)
-            question_set = get_object_or_404(QuestionSet, id=question_set_id)
-
-            leaderboard_entry = Leaderboard.objects.filter(user=user, language=language, questionset=question_set).first()
-
-            if leaderboard_entry:
-                serializer = LeaderboardSerializer(leaderboard_entry)
-                return Response(serializer.data, status=status.HTTP_200_OK)
-            else:
-                return Response({'message': 'No grade found for the user in the specified language and question set.'}, status=status.HTTP_404_NOT_FOUND)
+            leaderboard_entry = Leaderboard.objects.get(id=leaderboard_id)
+            serialized_data = LeaderboardSerializer(leaderboard_entry)
+            return Response(serialized_data.data, status=status.HTTP_200_OK)
+        except Leaderboard.DoesNotExist:
+            return Response({'error': 'Leaderboard entry not found.'}, status=status.HTTP_404_NOT_FOUND)
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
 
 
 class LeaderboardView(APIView):
@@ -165,55 +181,38 @@ class SubmitAnswersView(APIView):
     def post(self, request):
         try:
             user = request.user
-            # print(user)
-            language_id = int(request.data.get('language_id'))
-            # print(language_id)
-            question_set_id = int(request.data.get('question_set_id'))
-            # print(question_set_id)
+            language_id = request.data.get('language_id')
+            question_set_id = request.data.get('question_set_id')
             answers = request.data.get('answers', [])
-            # print(answers)
-
-            # Get language and question set objects
-            language = get_object_or_404(Language, id=language_id)
-            # print(language)
-            question_set = get_object_or_404(QuestionSet, id=question_set_id)
-            # print(question_set)
-
-            # Use a transaction to ensure atomicity
+            language = Language.objects.get(id=language_id)
+            question_set = QuestionSet.objects.get(id=question_set_id)
             curr_marks = 0
+            total_marks = 0
             for answer_data in answers:
                 question_id = answer_data.get('question_id')
                 option_id = answer_data.get('option_id')
 
-                # Retrieve question and correct option
-                question = Question.objects.filter(id=question_id).values()
-                curr_ans = QuestionAnswer.objects.filter(id=question_id).values()
-                # print(question)
-                # print(curr_ans)
-                # question_option_id = curr_ans['id']
-                # print(question_option_id)
+                question = Question.objects.get(id=question_id)
+                curr_ans = QuestionAnswer.objects.get(id=question_id)
 
+                total_marks += question.increment
+                if option_id == curr_ans.answer.id:
+                    curr_marks += question.increment
+                else:
+                    curr_marks -= question.decrement
+                # print(curr_marks)
+                # print(total_marks)
                 
-                # if int(option_id) == int(curr_ans.get(id)):
-                #     curr_marks += int(question.increment)
-                # else:
-                #     curr_marks -= int(question.decrement)
-                # print(curr_ans)
-                
+            leaderboard_entry = Leaderboard.objects.create(
+                user=user,
+                language=language,
+                questionset=question_set,
+                marks=curr_marks,
+                total_marks=total_marks
+            )
 
-            # leaderboard_entry, created = Leaderboard.objects.get_or_create(
-            #     user=user,
-            #     language=language,
-            #     questionset=question_set,
-            #     defaults={'marks': curr_marks},
-            # )
-
-            # # Update the leaderboard entry if it's not a new entry and the percentage is higher
-            # if not created and curr_marks > leaderboard_entry.marks:
-            #     leaderboard_entry.marks = curr_marks
-            #     leaderboard_entry.save()
-
-            return Response({'message': 'Answers submitted successfully!'}, status=status.HTTP_200_OK)
+            serialized_data = GradeSerializer(leaderboard_entry)
+            return Response(serialized_data.data, status=status.HTTP_200_OK)
 
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

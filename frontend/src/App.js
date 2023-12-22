@@ -9,6 +9,7 @@ import LanguageList from './language/HomeLanguage';
 import LanguageSet from './language/LanguageSet';
 import QuizPage from './language/QuizPage';
 import Leaderboard from './language/Leaderboard';
+import UserGrade from './language/UserGrade';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
           <Route index element={<LanguageList />} />
           <Route path=':language_id' element={<LanguageSet />} />
           <Route path=':language_id/sets/:question_set_id' element={<QuizPage />} />
-          {/* <Route path='questions/:question_set_id' element={<LanguageSet />} /> */}
+          <Route path='grade/:leaderboard_id' element={<UserGrade />} />
           <Route path='leaderboard' element={<Leaderboard />} />
         </Route>
       </Routes>

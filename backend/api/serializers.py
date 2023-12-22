@@ -48,6 +48,15 @@ class QuestionSerializer(serializers.ModelSerializer):
     def get_options(self, obj):
         return [{'id': option.id, 'value': option.choice} for option in obj.questionoption_set.all()]
 
+class GradeSerializer(serializers.ModelSerializer):
+    # You can include the language_id and questionset_id fields explicitly
+    language_id = serializers.ReadOnlyField(source='language.id')
+    questionset_id = serializers.ReadOnlyField(source='questionset.id')
+    username = serializers.ReadOnlyField(source='user.username')
+
+    class Meta:
+        model = Leaderboard
+        fields = ['id', 'user', 'username', 'language_id', 'questionset_id', 'marks', 'total_marks', 'last_graded_time']
 
 # class QuestionSerializer(serializers.ModelSerializer):
 #     options = serializers.SerializerMethodField()
