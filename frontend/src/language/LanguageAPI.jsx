@@ -5,7 +5,8 @@ import { Cookies } from "react-cookie";
 const cookie = new Cookies();
 
 class LanguageAPI {
-    static baseUrl = "http://127.0.0.1:8000/api";
+    // static baseUrl = "http://127.0.0.1:8000/api";
+    static baseUrl = "https://llgbackend.pythonanywhere.com/api";
 
     static async getLanguages() {
         try {
