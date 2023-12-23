@@ -3,7 +3,8 @@ import { Cookies } from 'react-cookie';
 
 
 class AuthAPI {
-    static baseUrl = "http://127.0.0.1:8000/auth";
+    // static baseUrl = "http://127.0.0.1:8000/auth";
+    static baseUrl = "https://llgbackend.pythonanywhere.com/auth";
 
     static async SignupUser(body) {
         try {
